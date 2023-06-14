@@ -18607,6 +18607,7 @@ html {
   background-size: cover;
 }
 
+
 @media (max-width: 991px) {
   .main-banner {
     padding: 1rem;
@@ -18617,6 +18618,7 @@ html {
 .main-banner .banner-title {
   text-align: right;
   width: 100%;
+  margin-top:50px;
 }
 
 a.btn:nth-child(3){
@@ -18834,7 +18836,7 @@ section {
 }
 
 .form-control {
-  border: 1px solid #f1efef;
+  border: 1px solid #dfdfdf;
   font-weight: 400;
   font-size: 14px;
   height: auto;
@@ -19030,3 +19032,7 @@ h6{
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+.contactus{
+  text-align: right;
+}

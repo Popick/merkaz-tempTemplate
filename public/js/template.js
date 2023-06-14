@@ -1,3 +1,36 @@
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAKWFnncG_KiQbPMzbXElQqGprLXm9livc",
+  authDomain: "amalaccelerator1.firebaseapp.com",
+  databaseURL: "https://amalaccelerator1-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "amalaccelerator1",
+  storageBucket: "amalaccelerator1.appspot.com",
+  messagingSenderId: "471111114984",
+  appId: "1:471111114984:web:92a33cfcf8c873a991295d",
+  measurementId: "G-MCQ0E0SVYF"
+};
+
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+// Initialize Realtime Database and get a reference to the service
+const database = firebase.database();
+
+function writeUserData(userId, name, email, imageUrl) {
+	firebase.database().ref('users/' + userId).set({
+	  username: name,
+	  email: email,
+	  profile_picture : imageUrl
+	});
+  }
+
+
+
+
+
 (function($) {
 	'use strict';
 	$(function() {
@@ -145,3 +178,13 @@
 
 	});
 })(jQuery);
+
+$(document).ready(function() {
+	$('#testbutton').click(function() {
+	  console.log('Button pressed!');
+	  writeUserData("213","name","email","imageUrl");
+	
+	});
+  });
+
+
